@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="static/style.css">  
+</head>
+<body>
+    <h1>House Price Prediction</h1>
+
+    <form id="predictionForm">
+        <label for="transaction_date">Transaction Date:</label>
+        <p>Date in Float. For example, 2013.250 = 2013 March, 2013.500 = 2013 June</p>
+        <input type="number" id="transaction_date" name="transaction_date" required>
+
+        <label for="house_age">House Age:</label>
+        <p>Years. For example: "10", "20", "100".</p>
+        <input type="number" id="house_age" name="house_age" required>
+
+        <label for="distance_to_mrt">Distance to MRT Station:</label>
+        <p>Meters. For example: "100", "400", "1000".</p>
+        <input type="number" id="distance_to_mrt" name="distance_to_mrt" required>
+
+        <label for="convenience_stores">Number of Convenience Stores nearby:</label>
+        <p>Integer. For example: "1", "2", "3".</p>
+        <input type="number" id="convenience_stores" name="convenience_stores" required>
+
+        <label for="latitude">Latitude:</label>
+        <p>Lat coordinate. For example: "40.753056"</p>
+        <input type="number" id="latitude" name="latitude" required>
+
+        <label for="longitude">Longitude:</label>
+        <p>Long coordinate. For example: "-73.983056"</p>
+        <input type="number" id="longitude" name="longitude" required>
+
+        <button type="button" onclick="predictPrice()">Predict Price</button>
+    </form>
+
+    <p id="predictionResult">Prediction will appear here</p>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="static/script.js"></script>  
+</body>
+</html>
